@@ -90,7 +90,7 @@ button{
         flex-direction: column;
         width:355px;
         margin:auto;
-        margin-top:25px;
+        margin-top:30px;
     }
     .flex-item-1{
         border-radius:10px 10px 0 0;
