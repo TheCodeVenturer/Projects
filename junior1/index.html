@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+
+  <title>Frontend Mentor | Intro section with dropdown navigation</title>
+  <!-- Google Font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Epilogue:wght@500;700&display=swap" rel="stylesheet">
+  <!-- custom css -->
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="navigation.css">
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    .attribution {
+      font-size: 11px;
+      text-align: center;
+    }
+
+    .attribution a {
+      color: hsl(228, 45%, 44%);
+    }
+  </style>
+</head>
+
+<body>
+  <!-- NAVIGATION BAR -->
+  <section>
+    <nav>
+      <div class="logo"><img src="images/logo.svg" alt="logo"></div>
+      <div class="toggle"><img class="cross" src="images/icon-menu.svg"></div>
+      <div class="mobile-menu">
+        <ul class="menu">
+          <li>
+            <ul class="flex-item">
+              <li class="nested-item" id="feature-box">Features <img src="images/icon-arrow-down.svg" alt="arrow">
+                <ul class="features">
+                  <li><img src="images/icon-todo.svg" alt=""> Todo</li>
+                  <li><img src="images/icon-calendar.svg" alt=""> Calendar</li>
+                  <li><img src="images/icon-reminders.svg" alt=""> Reminders</li>
+                  <li><img src="images/icon-planning.svg" alt=""> Planning</li>
+                </ul>
+              </li>
+              <li class="nested-item" id="company-box">Company <img src="images/icon-arrow-down.svg" alt="arrow">
+                <ul class="company">
+                  <li>History</li>
+                  <li>Our Team</li>
+                  <li>Blog</li>
+                </ul>
+              </li>
+              <li class="nested-item">Careers</li>
+              <li class="nested-item">About</li>
+            </ul>
+          </li>
+          <li>
+            <ul class="flex-item">
+              <li class="nested-item btn-1">Login</li>
+              <li class="nested-item btn-2">Register</li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </nav>
+  </section>
+  <section class="body-box">
+    <div class="body-box-1">
+      <h1>Make remote work</h1>
+
+      <p>Get your team in sync, no matter your location. Streamline processes,
+        create team rituals, and watch productivity soar.</p>
+
+      <div class="learn">Learn more</div>
+      <div class="images">
+        <img src="images/client-databiz.svg" alt="client-databiz">
+        <img src="images/client-audiophile.svg" alt="client-audiophile">
+        <img src="images/client-meet.svg" alt="client-meet">
+        <img src="images/client-maker.svg" alt="client-maker">
+      </div>
+    </div>
+    <div class="body-box-2">
+      <img src="images/image-hero-desktop.png" class="hero" alt="image-hero-desktop">
+    </div>
+  </section>
+
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+    Coded by <a href="">Niraj</a>.
+  </div>
+
+  <script src="script.js"></script>
+</body>
+
+</html>

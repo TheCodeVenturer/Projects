@@ -1,0 +1,190 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family: 'Epilogue', sans-serif;
+    color:hsl(0, 0%, 41%);
+}
+
+
+
+nav{
+    /* background:rgb(53, 47, 230); */
+    padding:20px 30px;
+    display: flex;
+    align-items: center;
+    /* background:yellow; */
+}
+
+
+
+nav{
+    color:black;
+}
+
+
+
+
+.logo img{
+    position:relative;
+    top:8px;
+}
+
+.menu{
+    align-items: center;
+    display:flex;
+    /* background:blue; */
+    justify-content: space-between;
+    padding-left: 25px;
+    padding-right: 25px;
+}
+
+
+li{
+    list-style:none;
+    font-size: 14px;
+}
+
+
+.toggle{
+    font-size:30px;
+    display:none;
+    cursor: pointer;
+}
+
+.cross{
+    position:relative;
+    z-index:2;
+}
+
+.mobile-menu{
+    flex-grow:1;
+}
+
+.flex-item{
+    display:flex;
+    align-content:space-between;
+    
+}
+.nested-item{
+    padding-left: 8px;
+    padding-right: 8px;
+    margin-left:5px;
+}
+
+.features{
+    background-color: rgb(255, 255, 255);
+    border-radius: 10px;
+    display:none;
+    position: absolute;
+    top: 60px;
+    left: 100px;
+    padding: 10px;
+}
+.company{
+    background-color: rgb(255, 255, 255);
+    border-radius: 10px;
+    display:none;
+    position:absolute;
+    top: 60px;
+    left: 240px;
+    padding: 10px;
+}
+
+.features li,.company li{
+    margin-top:10px;
+    padding-left:8px;
+    padding-right:8px;
+}
+
+.features.active, .company.active{
+    display:block;
+}
+
+#feature-box,#company-box{
+    cursor:pointer;
+}
+
+.btn-1{
+   cursor:pointer;
+   text-align:center;
+   padding-top:5px;
+}
+
+.btn-2{
+    cursor:pointer;
+    text-align:center;
+    border: 1px solid;
+    border-radius:10px;
+    padding: 5px 15px;
+    height:30px;
+}
+
+@media screen and (max-width:720px){
+    nav{
+        display:block;
+        position:relative;
+        padding:15px 20px;
+    }
+    
+    .menu{
+        display:none;
+        color:black;
+        background-color:white;
+        padding-left:0;
+        padding-top:50px;
+        height:100vh;
+        padding-right: 0;
+    }
+    .nested-item{
+        margin:15px;
+    }
+
+    .nested-item li{
+        padding-top:10px;
+    }
+    .flex-item{
+        flex-direction: column;
+    }
+    li{
+        text-align: left;
+    }
+    .btn-2{
+        margin:auto;
+        width:150px;
+    }
+    .features,.company{
+        display:none;
+        position:relative;
+        border-style: none;
+        padding:0;
+        margin-top:15px;
+        margin-left:15px;
+        left:0;
+        top:0;
+
+    }
+
+    .mobile-menu{
+        position:fixed;
+        visibility: hidden;
+        top:0px;
+        left:100vw;
+        z-index:1;
+        height:100vh;
+        width:100vw;
+        transition: ease 0.2s;
+        padding-left:35%;
+    }
+    .menu.active, .toggle{
+        display:block;
+    }
+    .toggle{
+        position:absolute;
+        top:10px;
+        right:10px;
+    }
+}
