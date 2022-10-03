@@ -33,14 +33,6 @@ body{
     border-radius: 30px;
     cursor:pointer;
 }
-@media (max-width: 720px) {
-    body{
-        margin:0;
-        height:100vh;
-        padding:20px 3% 0;
-        background-color: lightgray;
-    }
-}
 
 .name{
     margin-left: 10px;
@@ -135,7 +127,7 @@ a i:hover{
 fieldset{
     border-radius:10px;
     border:2px solid orange;
-    margin-right:5px;
+    margin-right: 5px;
 }
 
 /* posted comment */
@@ -157,4 +149,16 @@ fieldset{
     font-size: 18px;
     margin:0 20px;
     justify-content: left;
+}
+
+@media (max-width: 720px) {
+    body{
+        margin:0;
+        height:100vh;
+        padding:20px 3% 0;
+        background-color: lightgray;
+    }
+    a i{
+        font-size:16px;
+    }
 }
