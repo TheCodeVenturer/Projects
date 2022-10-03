@@ -158,6 +158,9 @@ fieldset{
         padding:20px 3% 0;
         background-color: lightgray;
     }
+    .name{
+        margin-left: 5px;
+    }
     a i{
         font-size:16px;
     }
