@@ -1,0 +1,197 @@
+.fishContainer1{
+    position: absolute;
+    animation: swim1 12s linear infinite;
+    transform: scale(0.5);
+    opacity:0.7;
+}
+.fishContainer2{
+    position: absolute;
+    animation: swim2 19s linear infinite;
+    transform: scale(0.8) rotateY(180deg);
+    opacity:0.6;
+}
+.fishContainer3{
+    position: absolute;
+    animation: swim3 10s linear infinite;
+    transform: scale(0.6);
+    opacity:0.6;
+}
+.fishContainer1 img,.fishContainer2 img,.fishContainer3 img{
+    width:100px;
+    position: absolute;
+}
+.fish1{
+    top:15px;
+    left:18px;
+    animation:swimIndividual 3.2s linear infinite;
+}
+.fish2{
+    top:-5px;
+    left:178px;
+    transform: scale(0.8);
+    animation:swimIndividual 2.3s linear infinite;
+}
+.fish3{
+    top:40px;
+    left:100px;
+    transform: scale(1.1);
+    animation:swimIndividual 3.5s linear infinite;
+}
+.fish4{
+    top:70px;
+    left:188px;
+    transform: scale(0.8);
+    animation:swimIndividual 2.3s linear infinite;
+}
+.fish5{
+    top:90px;
+    left:5px;
+    transform: scale(0.95);
+    animation:swimIndividual 3s linear infinite;
+}
+.fish6{
+    top:90px;
+    left:110px;
+    transform: scale(0.8);
+    animation:swimIndividual 2.3s linear infinite;
+}
+.fish7{
+    top:130px;
+    left:70px;
+    transform: scale(0.7);
+    animation:swimIndividual 2s linear infinite;
+}
+.fish8{
+    top:130px;
+    left:160px;
+    animation:swimIndividual 3s linear infinite;
+    
+}
+.fish9{
+    top:30px;
+    left:250px;
+    animation:swimIndividual 3s linear infinite;
+}
+.fish10{
+    top:110px;
+    left:250px;
+    transform: scale(1.1);
+    animation:swimIndividual 3.5s linear infinite;
+}
+@keyframes swim1{
+    0%{
+        left:100%;
+        top:10%;
+    }
+    100%{
+        left:-30%;
+        top:40%;
+    }
+}
+@keyframes swim2{
+    0%{
+        left:-30%;
+        top:60%;
+    }
+    100%{
+        left:130%;
+        top:30%;
+    }
+}
+@keyframes swim3{
+    0%{
+        left:100%;
+        top:85%;
+    }
+    100%{
+        left:-30%;
+        top:65%;
+    }
+}
+@keyframes swimIndividual {
+    0%{
+        transform: rotate(-10deg) translateY(10px);
+    }
+    50%{
+        transform: rotate(10deg) translateY(-10px);
+    }
+    100%{
+        transform: rotate(-10deg) translateY(10px);
+    }
+}
+.bigFish{
+    position: absolute;
+}
+.bigFish img{
+    width:200px;
+}
+.bigFish1{
+    top:10%;
+    scale:0.7;
+    animation: bigFishAnimate1 30s linear infinite;
+}
+
+.bigFish2{
+    top:25%;
+    right:0;
+    animation: bigFishAnimate2 25s linear infinite;
+}
+
+.bigFish3{
+    top:72%;
+    animation: bigFishAnimate1 23s linear infinite;
+}
+.bigFish4{
+    top:40%;
+    animation: bigFishAnimate1 42s linear infinite;
+}
+.bigFish5{
+    top:57%;
+    scale: 0.8 ;
+    right:0;
+    animation: bigFishAnimate2 38s linear infinite;
+}
+.bigFish6{
+    top:47%;
+    scale: 0.8 ;
+    right:0;
+    animation: bigFishAnimate2 28s linear infinite;
+}
+@keyframes  bigFishAnimate1{
+    0%{
+        transform: translateY(-100px) rotateZ(10deg);
+        left:-25%;
+    }
+    25%{
+        transform: translateY(0px) rotateZ(-10deg);
+    }
+    50%{
+        transform: translateY(100px) rotateZ(10deg);
+    }
+    75%{
+        transform: translateY(0px) rotateZ(-10deg);
+    }
+    100%{
+        transform: translateY(-100px) rotateZ(10deg);
+        left:140%;
+    }
+}
+@keyframes  bigFishAnimate2{
+    0%{
+        transform: translateY(-130px) rotateZ(-10deg);
+        left:140%;
+    }
+    25%{
+        transform: translateY(0px) rotateZ(10deg);
+    }
+    50%{
+        transform: translateY(130px) rotateZ(-10deg);
+    }
+    75%{
+        transform: translateY(0px) rotateZ(10deg);
+    }
+    100%{
+        transform: translateY(-130px) rotateZ(-10deg);
+        left:-25%;
+    }
+}

@@ -1,0 +1,45 @@
+.contain{
+    width:35px;
+    height:35px;
+    border-radius: 50%;
+    overflow:hidden;
+    position: relative;
+}
+.sunMoon{
+    width:70px;
+    height: 70px;
+    padding:6px;
+    background-color: red;
+    position:absolute;
+    left:-23px;
+    top:-0.6px;
+    animation: rotate-90 ease-in 0.3s;
+    animation-fill-mode: forwards;
+}
+@keyframes rotate90 {
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(90deg);
+    }
+}
+@keyframes rotate-90 {
+    0%{
+        transform: rotate(90deg);
+    }
+    100%{
+        transform: rotate(0deg);
+    }
+}
+.sunMoon i{
+    font-size: 25px;
+}
+.fa-sun{
+    position: absolute;
+    top:29px;
+}
+.fa-moon{
+    position: absolute;
+    right:32px;
+}
