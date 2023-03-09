@@ -55,7 +55,7 @@ h2{
 
 .content{
     width:30vw;
-    height:100%;
+    /* height:100%; */
     object-fit: cover;
 }
 .parent .content{
@@ -109,15 +109,76 @@ h2{
         transform: rotate(-2deg);
     }
 }
-/* Skills */
-.skills h2{
-    width:100%;
-    text-align: center;
-}
-/* End */
 
 @media only screen and (max-width:720px){
     .content{
         width:85vw;
     }
+}
+
+/* Skills */
+section .contentHeading {
+    width:100%;
+    text-align: center;
+}
+section .contentHeading img{
+    display: block;
+    margin:auto;
+}
+h2{
+    width:0px;
+    overflow: hidden;
+    animation: lengthChange ease-in 10s alternate infinite;
+    display: inline-block;
+    transition: width 10s ease-out;
+    text-align: left;
+}
+
+@keyframes lengthChange {
+    to{
+        width:0;
+    }
+    from{
+        width: 100px;
+    }
+    
+}
+/* End */
+
+.Education{
+    display: block;
+}
+.Education hr{
+    height: 30vw;
+    background-color: red;
+    width:4px;
+    margin:auto;
+    border-radius: 5px;
+}
+
+.EducationData{
+    width:600px;
+    margin:auto;
+}
+.EducationData>div{
+    display:flex;
+}
+
+.circle{
+    height:10px;
+    width:10px;
+    border-radius:50%;
+    background-color: #aa721e;
+    scale:1.4;
+    margin:auto;
+}
+.line{
+    margin:auto;
+    background-color: #aa721e;
+    height:125px;
+    width:5px;
+}
+
+.InstitutionDetails{
+    width:295px;
 }
