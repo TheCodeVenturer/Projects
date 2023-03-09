@@ -3,11 +3,12 @@
     margin:0;
     padding:0;
     font-family: 'Gentium Book Plus', serif;
+    scroll-behavior: smooth;
 }
 section{
     min-height:100vh;
     display: flex;
-    margin:auto;
+    margin:10px auto;
     justify-content: space-around;
     width:80vw;
     flex-wrap: wrap;
@@ -151,8 +152,11 @@ h2{
 
 
 .EducationData{
+    min-width:320px;
+    max-width:600px;
     width:400px;
     margin:auto;
+    margin-top: 10px;
 }
 .EducationData>div{
     display:flex;
@@ -174,16 +178,19 @@ h2{
 }
 
 .InstitutionDetails{
-    /* box-sizing: border-box; */
+    box-sizing: border-box;
     width:175px;
-    width:calc(45% - 3px);
-    height:140px;
-    padding:10px;
+    width:calc(50% - 3px);
+    position:relative;
+    top:-10px;
+    /* height:140px; */
 }
 .leftEducationBox{
-    text-align: right;
+    text-align: left;
+    padding-right:5px;
 }
 .rightEducationBox{
-    text-align: left;
+    padding-left:5px;
+    text-align: right;
 }
 /* Education CSS Starts Here*/
