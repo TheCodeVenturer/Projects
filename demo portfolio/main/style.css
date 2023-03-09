@@ -144,20 +144,14 @@ h2{
     
 }
 /* End */
-
+/* Education CSS Starts Here*/
 .Education{
     display: block;
 }
-.Education hr{
-    height: 30vw;
-    background-color: red;
-    width:4px;
-    margin:auto;
-    border-radius: 5px;
-}
+
 
 .EducationData{
-    width:600px;
+    width:400px;
     margin:auto;
 }
 .EducationData>div{
@@ -165,8 +159,8 @@ h2{
 }
 
 .circle{
-    height:10px;
-    width:10px;
+    height:6px;
+    width:6px;
     border-radius:50%;
     background-color: #aa721e;
     scale:1.4;
@@ -175,10 +169,21 @@ h2{
 .line{
     margin:auto;
     background-color: #aa721e;
-    height:125px;
-    width:5px;
+    height:155px;
+    width:2px;
 }
 
 .InstitutionDetails{
-    width:295px;
+    /* box-sizing: border-box; */
+    width:175px;
+    width:calc(45% - 3px);
+    height:140px;
+    padding:10px;
 }
+.leftEducationBox{
+    text-align: right;
+}
+.rightEducationBox{
+    text-align: left;
+}
+/* Education CSS Starts Here*/
