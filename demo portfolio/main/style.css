@@ -1,161 +1,175 @@
-@import url('https://fonts.googleapis.com/css2?family=Gentium+Book+Plus&family=Ubuntu:ital@1&display=swap');
-*{
-    margin:0;
-    padding:0;
-    font-family: 'Gentium Book Plus', serif;
-    scroll-behavior: smooth;
-}
 section{
-    min-height:100vh;
-    display: flex;
-    margin:10px auto;
-    justify-content: space-around;
-    width:80vw;
-    flex-wrap: wrap;
-}
-h2{
-    font-family: 'Ubuntu', sans-serif;
-}
-.parent{
-    min-width:320px;
-    max-width:46%;
     text-align: center;
-    position: relative;
-    margin:5px;
+    padding:10px 5vw;
+    min-height:95vh;
 }
-.parent img{
-    width:150px;
-    position: absolute;
-    top:50px;
-    left:50%;
+
+.contentHeading h2{
+    margin:0;
+}
+
+.parentContent{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    text-align: center;
+    margin: auto;
+}
+
+.parentContent img{
+    width: 150px;
+}
+
+.left,.right{
+    padding:15px 20px;
+    /* min-width:250px;
+    max-width:350px; */
+    width:
 }
 .left img{
-    animation: swim1 2s ease-out alternate infinite;
+    animation: swing1 2s ease-out alternate infinite;
 }
-.right img{
-    animation: swim2 2s ease-out alternate infinite;
-    left:50%;
-    top:55px;
-}
-@keyframes swim1 {
+@keyframes swing1 {
     0%{
-        transform: translate(-50%,-50%) rotateY(180deg) rotate(7deg);
+        transform: rotateY(180deg) rotate(7deg);
     }
     100%{
-        transform: translate(-50%,-50%) rotateY(180deg) rotate(-7deg);
-    }
-}
-@keyframes swim2 {
-    0%{
-        transform: translate(-50%,-50%)rotate(-7deg);
-    }
-    100%{
-        transform: translate(-50%,-50%)rotate(7deg);
+        transform: rotateY(180deg) rotate(-7deg);
     }
 }
 
+.right img{
+    animation: swing2 2.5s ease-in alternate infinite;
+}
+
+@keyframes swing2 {
+    0%{
+        transform: rotate(-7deg);
+    }
+    100%{
+        transform: rotate(7deg);
+    }
+}
+
+
+@media only screen and (max-width:1024px) {
+    .left,.right{
+        width:600px;
+    }
+}
+@media only screen and (min-width:1024px) {
+    .left,.right{
+        width:400px;
+    }
+}
+/* content */
 .content{
-    width:30vw;
-    /* height:100%; */
-    object-fit: cover;
-}
-.parent .content{
-    box-sizing: border-box;
-    padding: 5px;
-    margin: 100px 5px 5px 5px;
+    position: relative;
+    transform-origin: center -54px;
     border-top:2px solid #aa721e;
-    transform-origin: center -55px;
 }
-.left .content{
-    animation: hang1 2.5s ease-out alternate infinite;
+.leftContent{
+    animation: hang1 3s ease-out alternate infinite;
 }
-.right .content{
+
+.rightContent{
     animation: hang2 2s ease-in alternate infinite;
 }
-.parent .content::before{
+
+.leftContent::after,.rightContent::after{
     position: absolute;
     content:'';
+    left:50%;
     top:-54px;
     width:8px;
-    left:50%;
     height:8px;
     border-radius:5px;
-    background: radial-gradient( #ff8800, #ffab2e);
+    transform: translate(25%,0);
+    /* background: radial-gradient( #ff8800, #ffab2e); */
+    background-color: red;
 }
-.parent .content::after{
+.leftContent::before,.rightContent::before{
     position: absolute;
     content: '';
     width:8px;
-    top:-55px;
-    height:52px;
-    border:1px solid #aa721e;
+    left:50%;
+    top:-54px;
+    height:50px;
+    border:2px solid #aa721e;
     background-color: none;
     border-radius: 20% 20% 0 0;
 }
 
 @keyframes hang1 {
-    0%{
+    to{
         transform:  rotate(-2deg);
     }
-    100%{
+    from{
         transform: rotate(2deg);
     }
 }
 
 @keyframes hang2 {
-    0%{
+    to{
         transform:  rotate(2deg);
     }
-    100%{
+    from{
         transform: rotate(-2deg);
     }
 }
 
-@media only screen and (max-width:720px){
-    .content{
-        width:85vw;
-    }
-}
-
-/* Skills */
-section .contentHeading {
-    width:100%;
-    text-align: center;
-}
-section .contentHeading img{
-    display: block;
-    margin:auto;
-}
-h2{
-    width:0px;
+/* Introduction */
+.Introduction h2{
+    margin:0 auto;
+    width:0;
     overflow: hidden;
-    animation: lengthChange ease-in 10s alternate infinite;
-    display: inline-block;
+    animation: lengthChangeIntroduction ease-in 10s alternate infinite;
     transition: width 10s ease-out;
     text-align: left;
 }
 
-@keyframes lengthChange {
+@keyframes lengthChangeIntroduction {
     to{
         width:0;
     }
     from{
-        width: 100px;
+        width: 70px;
     }
     
 }
-/* End */
-/* Education CSS Starts Here*/
+
+/* Education */
+
 .Education{
-    display: block;
-    width:90vw;
+    margin: auto;
+    text-align: center;
+}
+.Education h2{
+    margin:0 auto;
+    width:0;
+    overflow: hidden;
+    animation: lengthChangeEducation ease-in 10s alternate infinite;
+    transition: width 10s ease-out;
+    text-align: left;
 }
 
+@keyframes lengthChangeEducation {
+    to{
+        width:0;
+    }
+    from{
+        width: 110px;
+    }
+    
+}
+.Education p,.Education h3{
+    margin: 5px;
+}
 
 .EducationData{
     width:340px;
     margin:auto;
-    margin-top: 10px;
+    margin-top: 30px;
 }
 .EducationData>div{
     display:flex;
@@ -172,7 +186,7 @@ h2{
 .line{
     margin:auto;
     background-color: #aa721e;
-    height:155px;
+    height:125px;
     width:2px;
 }
 
@@ -216,10 +230,14 @@ h2{
 }
 .InstitutionDetails span{
     font-size: 14px;
-    float: right;
+    /* float: right; */
 }
 .InstitutionDetails span:hover{
     font-weight:600;
 }
 
 /* Education CSS Starts Here*/
+
+
+
+
